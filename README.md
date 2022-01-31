@@ -129,3 +129,5 @@ void loop() {}
 
 3) Прошивка основного ПО 
 Запускаем программу gcUploader для заливки бинарных файлов.HEX в Ардуино.
+
+![gcUploader](img/gcUploader.jpg)
