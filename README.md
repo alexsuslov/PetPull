@@ -88,4 +88,4 @@
 
 ## Бобина для намотки филамента
 
-![pid1](img/pid1.jpg)
+![spool](img/spool.jpg)
