@@ -112,17 +112,20 @@
 ## Прошивка 
 Прошивка как всегда простейшая. Включает в себя три шага. 
 1) Скачивание последней прошивки из репозитория: 
-https://drive.google.com/open?id=1S7iesOyFmSDcyv66gEf9Ux55c0caf5wk
-Скачивание программы которая умеет прошивать ардуино бинарными файлами: https://drive.google.com/open?id=1HEsLZSfcgszGMGvXLtFU6XibcUySJIrJ
-Описание программы:
-http://www.getchip.net/posts/136-gc-uploader-avtomaticheskijj-zagruzchik-hex-fajjlov-dlya-arduino/
+
+- https://drive.google.com/open?id=1S7iesOyFmSDcyv66gEf9Ux55c0caf5wk
+- [Скачивание программы которая умеет прошивать ардуино бинарными файлами](https://drive.google.com/open?id=1HEsLZSfcgszGMGvXLtFU6XibcUySJIrJ)
+- [Описание программы](http://www.getchip.net/posts/136-gc-uploader-avtomaticheskijj-zagruzchik-hex-fajjlov-dlya-arduino/)
+
 2) Подготовка EEPROM микроконтроллера. 
 Желательная процедура для гарантированной очистки содержимого энергонезависимой памяти и исключения возможных ошибок при дальнейшем обновлении прошивки. В большинстве случаев не требуется, но настоятельно рекомендуется. Дело в том что в ПЗУ процессора могут остаться старые данные с которыми станок будет работать не корректно. Для того чтобы их удалить загрузите в ардуину скетч. 
- 
+
+```
 #include <EEPROM.h>
 void setup() { for (int i = 0 ; i < 512 ; i++) {EEPROM.write(i, 255);}}
 void loop() {}
-
+```
 После того как прошили им ардуино - подождите 10 секунд и прошивайте основное ПО.
+
 3) Прошивка основного ПО 
 Запускаем программу gcUploader для заливки бинарных файлов.HEX в Ардуино.
