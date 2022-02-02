@@ -7,6 +7,8 @@
 - [Схема устройства](pdf/2019-11-28V1.2.pdf)
 - [Печатная плата для ЛУТ](https://drive.google.com/open?id=1dySD1lTDA4rSZQcVADHj6VBQWqIWLeg4)
 
+- [Сборка](assembly.md)
+
 ## Материалы
 
 - Двигатель - Nema 17
